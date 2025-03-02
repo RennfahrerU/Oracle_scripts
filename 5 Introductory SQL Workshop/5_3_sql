@@ -1,0 +1,14 @@
+rem 3) Find out what are the departments that have at least one employee.
+
+--SELECT * FROM DEPARTMENTS;
+--SELECT * FROM EMPLOYEES;
+
+--SELECT DEPARTMENT_ID AS DEP_ID, DEPARTMENT_NAME AS NAME FROM DEPARTMENTS;
+
+/* SELECT DEPARTMENT_ID AS DEP_ID, DEPARTMENT_NAME AS NAME, EMPLOYEE_ID AS EMP_ID,
+    LAST_NAME AS LAST_N
+FROM DEPARTMENTS JOIN EMPLOYEES
+USING (DEPARTMENT_ID); */
+
+SELECT DISTINCT d.department_name FROM Departments d
+JOIN Employees e ON d.department_id = e.department_id;
